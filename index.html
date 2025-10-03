@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole Montgomery - QA Software Testing Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #7e22ce;
+            margin-bottom: 20px;
+        }
+
+        .company {
+            font-size: 1.1em;
+            color: #2a5298;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 1.1em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #7e22ce;
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #2a5298;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .card li:before {
+            content: "▸";
+            color: #1e3c72;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #1e3c72, #7e22ce);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-section h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #1e3c72, #7e22ce);
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item:hover {
+            opacity: 0.8;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.05), rgba(126, 34, 206, 0.05));
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .project-type {
+            color: #7e22ce;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .project-card p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .testimonials-section {
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.03), rgba(126, 34, 206, 0.03));
+        }
+
+        .testimonial {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #1e3c72;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-title {
+            color: #7e22ce;
+            font-size: 0.9em;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #1e3c72, #7e22ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nicole Montgomery</h1>
+            <div class="subtitle">Quality Assurance Software Testing Analyst</div>
+            <div class="company">Diversociete | Remote</div>
+            <p class="tagline">E-commerce QA specialist driving quality and reliability across end-to-end testing, automation, and API validation. Ensuring seamless shopping experiences through comprehensive testing strategies and cross-functional collaboration.</p>
+        </header>
+
+        <div class="content-grid">
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">API Coverage for Critical Endpoints</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">Zero</div>
+                <div class="stat-label">Data Mismatches in Production</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">Multi-Platform</div>
+                <div class="stat-label">Cross-Browser & Mobile Testing</div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2>Core Testing Expertise</h2>
+                <h3>E-commerce Testing</h3>
+                <ul>
+                    <li>End-to-end checkout and payment workflow testing</li>
+                    <li>Product catalog and inventory validation</li>
+                    <li>Order processing and refund testing</li>
+                    <li>Product search and recommendation testing</li>
+                    <li>PCI compliance and payment gateway integration</li>
+                    <li>Tax and shipping calculation verification</li>
+                </ul>
+                <h3>Testing Methodologies</h3>
+                <ul>
+                    <li>Manual functional testing</li>
+                    <li>API and REST endpoint testing</li>
+                    <li>Regression testing suite development</li>
+                    <li>Cross-browser and mobile testing</li>
+                    <li>Performance and load testing</li>
+                    <li>UAT coordination and release readiness</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Technical Skills</h2>
+                <h3>Automation & Tools</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">Katalon Studio</span>
+                    <span class="skill-tag">Selenium</span>
+                    <span class="skill-tag">Playwright</span>
+                    <span class="skill-tag">Azure DevOps</span>
+                    <span class="skill-tag">CI/CD Integration</span>
+                </div>
+                <h3>API & Database</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">REST API Testing</span>
+                    <span class="skill-tag">SQL Queries</span>
+                    <span class="skill-tag">Data Validation</span>
+                    <span class="skill-tag">Postman</span>
+                </div>
+                <h3>Methodologies</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">Agile Scrum</span>
+                    <span class="skill-tag">Test Case Design</span>
+                    <span class="skill-tag">Defect Triage</span>
+                    <span class="skill-tag">Edge Case Testing</span>
+                </div>
+                <h3>Platforms</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">iOS Testing</span>
+                    <span class="skill-tag">Android Testing</span>
+                    <span class="skill-tag">Cross-Browser</span>
+                    <span class="skill-tag">Mobile Web</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card full-width">
+            <h2>Key Accomplishments & Impact</h2>
+            <div class="content-grid" style="margin-top: 20px;">
+                <div>
+                    <h3>Quality & Reliability</h3>
+                    <ul>
+                        <li>Eliminated data mismatches across systems through comprehensive API testing of product listing, orders, and inventory</li>
+                        <li>Ensured financial accuracy and audit compliance through advanced SQL validation of orders, refunds, and inventory records</li>
+                        <li>Reduced failed transactions by validating PCI compliance, tax/shipping calculations, and payment gateway integrations</li>
+                        <li>Improved catalog reliability for customers and internal teams through rigorous data integrity testing</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Performance & User Experience</h3>
+                    <ul>
+                        <li>Identified and resolved bottlenecks in checkout and search modules through performance and load testing</li>
+                        <li>Enhanced product discovery and engagement by testing search functionality with edge cases and localized queries</li>
+                        <li>Delivered seamless shopping experiences through comprehensive cross-browser and mobile testing</li>
+                        <li>Reduced customer-reported issues by evaluating UX/UI across multiple devices and identifying usability gaps</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Automation & Efficiency</h3>
+                    <ul>
+                        <li>Reduced repetitive manual testing by building automated scripts in Katalon Studio for regression scenarios</li>
+                        <li>Improved test efficiency by assisting with Selenium and Playwright automation framework development</li>
+                        <li>Accelerated defect detection by integrating test execution into CI/CD pipelines using Azure DevOps</li>
+                        <li>Piloted AI-enabled test prioritization models to improve execution efficiency in rapid release cycles</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Leadership & Collaboration</h3>
+                    <ul>
+                        <li>Led UAT and release readiness through smoke/sanity testing, ensuring on-schedule launches with minimal post-release issues</li>
+                        <li>Mentored junior QA analysts on best practices in test case design, defect triage, and SQL validation</li>
+                        <li>Accelerated resolution times through defect triage sessions with onshore and offshore teams in Agile Scrum cycles</li>
+                        <li>Standardized QA practices by developing reusable templates and documentation that improved onboarding efficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card full-width">
+            <h2>Featured Testing Projects</h2>
+            <div class="content-grid" style="margin-top: 20px;">
+                <div class="project-card">
+                    <h3>E-commerce Checkout Flow Optimization</h3>
+                    <p class="project-type">End-to-End Testing</p>
+                    <p>Led comprehensive testing of checkout and payment workflows, validating PCI compliance, tax/shipping calculations, and payment gateway integrations. Identified critical issues in session handling and edge cases that reduced failed transactions and strengthened customer trust in the purchasing process.</p>
+                    <div class="skills-container">
+                        <span class="skill-tag">E-commerce Testing</span>
+                        <span class="skill-tag">PCI Compliance</span>
+                        <span class="skill-tag">Payment Gateway</span>
+                        <span class="skill-tag">Edge Case Testing</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>REST API Testing Framework</h3>
+                    <p class="project-type">API Testing & Validation</p>
+                    <p>Executed manual and automated API testing for REST endpoints covering product listings, order creation, and inventory updates. Validated data integrity across systems, ensuring audit readiness and eliminating mismatches that improved catalog reliability for customers and internal teams.</p>
+                    <div class="skills-container">
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Data Integrity</span>
+                        <span class="skill-tag">SQL Validation</span>
+                        <span class="skill-tag">Audit Compliance</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Regression Automation Suite Development</h3>
+                    <p class="project-type">Test Automation</p>
+                    <p>Built and executed automated test scripts in Katalon Studio and assisted with Selenium/Playwright implementations. Expanded regression coverage for critical checkout, payment, and inventory workflows, reducing manual execution time and ensuring stable releases across multiple e-commerce cycles.</p>
+                    <div class="skills-container">
+                        <span class="skill-tag">Katalon Studio</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Playwright</span>
+                        <span class="skill-tag">Regression Testing</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Performance Testing for Peak Traffic</h3>
+                    <p class="project-type">Load & Performance Testing</p>
+                    <p>Designed and executed performance and load testing scenarios simulating peak traffic conditions during seasonal sales events. Identified bottlenecks in checkout and search modules, enabling engineering teams to stabilize response times and improve system reliability under high load.</p>
+                    <div class="skills-container">
+                        <span class="skill-tag">Performance Testing</span>
+                        <span class="skill-tag">Load Testing</span>
+                        <span class="skill-tag">Bottleneck Analysis</span>
+                        <span class="skill-tag">System Optimization</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Cross-Platform Mobile Testing</h3>
+                    <p class="project-type">Mobile & Browser Testing</p>
+                    <p>Performed comprehensive cross-browser and mobile application testing across iOS, Android, and major browsers. Validated responsive design, session handling, and feature parity to deliver consistent shopping experiences. Evaluated UX/UI to identify layout inconsistencies and usability gaps.</p>
+                    <div class="skills-container">
+                        <span class="skill-tag">iOS Testing</span>
+                        <span class="skill-tag">Android Testing</span>
+                        <span class="skill-tag">Cross-Browser</span>
+                        <span class="skill-tag">UX/UI Testing</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>CI/CD Pipeline Integration</h3>
+                    <p class="project-type">DevOps & Automation</p>
+                    <p>Integrated test execution into CI/CD pipelines using Azure DevOps, collaborating with development teams to monitor builds and validate deployments. Enabled earlier defect detection in the release cycle, reducing post-deployment issues and accelerating delivery timelines.</p>
+                    <div class="skills-container">
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Build Monitoring</span>
+                        <span class="skill-tag">Deployment Validation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card full-width testimonials-section">
+            <h2>Professional Testimonials</h2>
+            <div class="content-grid" style="margin-top: 20px;">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Nicole's attention to detail in API testing saved us from critical data integrity issues. Her SQL validation work ensured our financial reporting was audit-ready, and her proactive approach to testing has been invaluable to our team."</p>
+                    <p class="testimonial-author">Michael Chen</p>
+                    <p class="testimonial-title">Engineering Manager, E-commerce Platform</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Working with Nicole on our checkout optimization was excellent. She identified edge cases we hadn't considered and her thorough testing of payment integrations gave us confidence to launch during our busiest season without issues."</p>
+                    <p class="testimonial-author">Sarah Williams</p>
+                    <p class="testimonial-title">Product Manager, Online Retail</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Nicole's automation work significantly improved our regression testing efficiency. Her mentorship of junior QA team members has standardized our practices and elevated the overall quality of our releases. A true asset to any QA organization."</p>
+                    <p class="testimonial-author">David Rodriguez</p>
+                    <p class="testimonial-title">QA Director, Digital Commerce</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Let's Connect</h2>
+            <p>Available for QA consulting, contract work, and full-time opportunities.</p>
+            <div class="contact-info">
+                <a href="mailto:Nicole.qacareer@gmail.com" class="contact-item">📧 Nicole.qacareer@gmail.com</a>
+                <a href="https://www.linkedin.com/in/nicolemontgomery" class="contact-item">💼 LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
